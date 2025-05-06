@@ -1,0 +1,204 @@
+:root {
+    --primary-color: #8c6a5e;
+    --secondary-color: #d0b49f;
+    --accent-color: #e4c3ad;
+    --dark-color: #533d34;
+    --light-color: #f7f2ef;
+    --success-color: #6a8e7f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: var(--light-color);
+    background-image: radial-gradient(var(--secondary-color) 1px, transparent 1px);
+    background-size: 30px 30px;
+    padding: 30px 20px;
+    min-width: 800px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-family: Georgia, serif;
+    color: var(--dark-color);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 2px;
+    background: var(--accent-color);
+    margin: 10px auto 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+p {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+}
+
+#calculatorForm {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    border: 1px solid var(--accent-color);
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.formGroup select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    background-color: var(--light-color);
+}
+
+.formGroup select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.checkboxGroup, .radioGroup {
+    margin-left: 0;
+    display: grid;
+    grid-gap: 8px;
+    padding: 5px 0;
+}
+
+.checkboxItem, .radioItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.checkboxItem label, .radioItem label {
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: -1px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: var(--dark-color);
+}
+
+#resultContainer {
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--accent-color);
+    max-width: 600px;
+}
+
+#resultContainer h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+#finalPrice {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--dark-color);
+    padding: 10px 20px;
+    background-color: var(--light-color);
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#finalPrice.calculated {
+    color: var(--success-color);
+}
+
+#calculation-message {
+    margin-top: 15px;
+    color: var(--primary-color);
+    font-style: italic;
+}
+
+.inputFocus {
+    background-color: rgba(208, 180, 159, 0.1);
+    border-radius: 5px;
+    padding: 2px;
+    margin: -2px;
+}
+
+/* Attribution styling */
+.attribution {
+    text-align: center;
+    margin: 40px auto 20px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    opacity: 0.8;
+}
+
+.attribution a {
+    color: var(--dark-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.attribution a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
